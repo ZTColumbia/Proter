@@ -20,6 +20,14 @@ module NavigationHelpers
       edit_product_path(Product.find_by_name($1))
     when /^the details page for "(.*)"$/i
       product_path(Product.find_by_name($1))
+    when /^the signup page$/
+      sign_up_path()
+    when /^the signin page$/
+      sign_in_path()
+    when /^the new password page$/
+      new_password_path()
+    when /^the password_edit page for "(.*)"$/i
+      edit_user_password_path(1)
     else
       begin
         page_name =~ /^the (.*) page$/
