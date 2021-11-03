@@ -32,7 +32,7 @@ Scenario: Forget password & reset
     And I should see "Reset your password"
     When I fill in "Email address" with "new_Email_for_testing@Email.com"
     And I press "Reset password"
-    Then I should see "You will receive an email within the next few minutes."
+    Then I should see "You will receive an email "
 
 Scenario: login use wrong email or password
     Given I am on the signin page
@@ -52,4 +52,4 @@ Scenario: signed in users change password
     And I should see "To be emailed a link to reset your password"
     When I fill in "Email" with "new_Email2_for_testing@Email.com"
     And I press "Reset password"
-    Then I should see "You will receive an email within the next few minutes." 
+    Then I should see "You will receive an email " 
