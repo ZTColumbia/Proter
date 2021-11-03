@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20211102014342) do
+ActiveRecord::Schema.define(version: 20211102204852) do
 
   create_table "movies", force: :cascade do |t|
     t.string   "title"
@@ -36,5 +36,25 @@ ActiveRecord::Schema.define(version: 20211102014342) do
     t.datetime "updated_at", null: false
     t.string   "name"
   end
+
+  create_table "users", force: :cascade do |t|
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.string   "email",                          null: false
+    t.string   "encrypted_password", limit: 128, null: false
+    t.string   "confirmation_token", limit: 128
+    t.string   "remember_token",     limit: 128, null: false
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "city"
+    t.string   "state"
+    t.string   "address"
+    t.string   "card_number"
+    t.string   "card_cvv"
+    t.string   "card_expired_date"
+  end
+
+  add_index "users", ["email"], name: "index_users_on_email"
+  add_index "users", ["remember_token"], name: "index_users_on_remember_token"
 
 end

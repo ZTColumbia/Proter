@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'movies#index'
 
+  resources :movies
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
@@ -13,9 +14,12 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-
-  resources :movies
-  
+    resources :users,
+      only: Clearance.configuration.user_actions do
+        resource :password,
+          controller: 'clearance/passwords',
+          only: [:edit, :update]
+      end
   # Example resource route with options:
   #   resources :products do
   #     member do
