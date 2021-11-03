@@ -35,8 +35,15 @@ class ProductsController < ApplicationController
   def new
       
   end
+
+  def buy
+    @product = Product.find(params[:id])
+    newCount = @product.buy_count
+    @product.update_column(:buy_count, newCount + 1)
+    flash[:notice] = "You buy product '#{@product.name}' successfully!."
+  end
     
   def product_params
-    params.require(:product).permit(:product_id, :name, :seller_id, :brand, :price, :weight, :color, :discount, :category, :box, :created_at, :updated_at)
+    params.require(:product).permit(:product_id, :name, :seller_id, :brand, :price, :weight, :color, :discount, :category, :box, :created_at, :updated_at, :buy_count)
   end
 end
