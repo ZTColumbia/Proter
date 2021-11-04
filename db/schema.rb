@@ -24,7 +24,6 @@ ActiveRecord::Schema.define(version: 20211103012314) do
 
   create_table "products", force: :cascade do |t|
     t.integer  "product_id"
-    t.string   "name"
     t.integer  "seller_id"
     t.string   "brand"
     t.float    "price"
@@ -35,6 +34,7 @@ ActiveRecord::Schema.define(version: 20211103012314) do
     t.string   "box"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "name"
     t.integer  "buy_count"
   end
 
