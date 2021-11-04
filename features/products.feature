@@ -17,6 +17,14 @@ Feature: management page for products works well
   | chair      | Lucys   | 542  |57    |White|0       |home    |12x14x21         |
   | mirror     | G'mol   | 214  |23    |Black|0       |home    |12x14x21         |
   
+Scenario: Create a new product
+    Given I am on the home page
+    When  I follow "Add new product"
+    And  I fill in "Name" with "new_for_testing"
+    And I fill in "Price" with "30"
+    And  I press "Save Changes"
+    Then I am on the home page
+    And I should see "new_for_testing"
 Scenario: View the default page
     Given I am on the home page
     Then I should see "Porter"
@@ -46,3 +54,8 @@ Given I am on the details page for "cook"
 When I follow "Delete"
 Then I am on the home page
 And I should not see "cook"
+
+Scenario: add an item to cart in the detail page
+Given I am on the details page for "cook"
+When I follow "Add one to cart"
+Then I should see "You buy product"
