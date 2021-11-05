@@ -38,7 +38,7 @@ class ProductsController < ApplicationController
 
   def buy
     @product = Product.find(params[:id])
-    newCount = @product.buy_count
+    newCount = @product[:buy_count]
     @product.update_column(:buy_count, newCount + 1)
     flash[:notice] = "You buy product '#{@product.name}' successfully!."
   end
