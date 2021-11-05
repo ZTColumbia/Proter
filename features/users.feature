@@ -53,3 +53,4 @@ Scenario: signed in users change password
     When I fill in "Email" with "new_Email2_for_testing@Email.com"
     And I press "Reset password"
     Then I should see "You will receive an email " 
+

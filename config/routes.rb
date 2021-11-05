@@ -23,8 +23,8 @@ Rails.application.routes.draw do
     
     
   resources :products
+      get 'products/:id/buying', to: 'products#buy', as: :buying
     
-  get 'products/:id/buying', to: 'products#buy', as: :buying
   # Example resource route with options:
   #   resources :products do
   #     member do
@@ -36,7 +36,7 @@ Rails.application.routes.draw do
   #       get 'sold'
   #     end
   #   end
-
+    
   # Example resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales

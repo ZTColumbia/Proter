@@ -38,9 +38,14 @@ class ProductsController < ApplicationController
 
   def buy
     @product = Product.find(params[:id])
-    newCount = @product[:buy_count]
-    @product.update_column(:buy_count, newCount + 1)
+    count=@product[:buy_count]
+    if count==nil
+        count=0
+    end
+    @product[:buy_count]=count+1
+    
     flash[:notice] = "You buy product '#{@product.name}' successfully!."
+    redirect_to '/products/'+params[:id]
   end
     
   def product_params
