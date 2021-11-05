@@ -33,9 +33,9 @@ ActiveRecord::Schema.define(version: 20211103012314) do
     t.float    "discount"
     t.string   "category"
     t.string   "box"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer  "buy_count"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.integer  "buy_count",  default: 0
   end
 
   create_table "users", force: :cascade do |t|

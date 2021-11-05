@@ -1,0 +1,132 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/tomstark/Desktop/saas/Proter/app/helpers/application_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/tomstark/Desktop/saas/Proter/app/models/product.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/tomstark/Desktop/saas/Proter/app/models/user.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/tomstark/Desktop/saas/Proter/app/controllers/products_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null
+        ]
+      },
+      "/Users/tomstark/Desktop/saas/Proter/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          1,
+          null
+        ]
+      },
+      "/Users/tomstark/Desktop/saas/Proter/app/controllers/users_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          11,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    },
+    "timestamp": 1636089101
+  }
+}

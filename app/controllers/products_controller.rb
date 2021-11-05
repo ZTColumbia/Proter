@@ -33,20 +33,19 @@ class ProductsController < ApplicationController
   end
     
   def new
-      
   end
 
-  def buy
-    @product = Product.find(params[:id])
-    count=@product[:buy_count]
-    if count==nil
-        count=0
-    end
-    @product[:buy_count]=count+1
-    
-    flash[:notice] = "You buy product '#{@product.name}' successfully!."
-    redirect_to '/products/'+params[:id]
-  end
+  # def buy
+  #   @product = Product.find(params[:id])
+  #   count=@product[:buy_count]
+  #   if count==nil
+  #       count=0
+  #   end
+  #   @product[:buy_count]=count+1
+  #
+  #   flash[:notice] = "You buy product '#{@product.name}' successfully!."
+  #   redirect_to '/products/'+params[:id]
+  # end
     
   def product_params
     params.require(:product).permit(:product_id, :name, :seller_id, :brand, :price, :weight, :color, :discount, :category, :box, :created_at, :updated_at, :buy_count)
