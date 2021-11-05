@@ -20,8 +20,11 @@ Rails.application.routes.draw do
           controller: 'clearance/passwords',
           only: [:edit, :update]
       end
+    
+    
   resources :products
-    get 'products/:id/buying', to: 'products#buy', as: :buying
+      get 'products/:id/buying', to: 'products#buy', as: :buying
+    
   # Example resource route with options:
   #   resources :products do
   #     member do

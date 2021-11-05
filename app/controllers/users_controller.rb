@@ -1,6 +1,5 @@
 class UsersController < Clearance::UsersController
 
-
   private
     
   def user_params
