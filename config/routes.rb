@@ -24,8 +24,13 @@ Rails.application.routes.draw do
   resources :products
       # get 'products/:id/buying', to: 'products#buy', as: :buying
 
-  get 'test/buy', to: 'purchases#buy'
-    
+
+  #General Control
+  #For Shopping Group
+  post 'buy', to: 'purchases#buy'
+  get 'group/:city', to: 'purchases#group'
+
+
   # Example resource route with options:
   #   resources :products do
   #     member do

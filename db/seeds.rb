@@ -21,3 +21,12 @@
 # movies.each do |movie|
 #   Movie.create!(movie)
 # end
+
+
+group = [{:city => 'New York', :cur_people => 3, :total_people => 10, :people => "1_2_3_"},
+         # {:city => 'New York', :cur_people => 2, :total_people => 20, :people => "10_20"},
+  	 ]
+
+group.each do |gp|
+  ShoppingGroup.create!(gp)
+end

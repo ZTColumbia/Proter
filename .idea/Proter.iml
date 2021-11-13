@@ -63,6 +63,8 @@
     <orderEntry type="library" scope="PROVIDED" name="email_validator (v1.6.0, rbenv: 2.6.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubis (v2.7.0, rbenv: 2.6.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="execjs (v2.8.1, rbenv: 2.6.6) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="factory_girl (v4.9.0, rbenv: 2.6.6) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="factory_girl_rails (v4.9.0, rbenv: 2.6.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ffi (v1.15.3, rbenv: 2.6.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="formatador (v0.3.0, rbenv: 2.6.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="globalid (v0.4.2, rbenv: 2.6.6) [gem]" level="application" />
