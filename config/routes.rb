@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'products#index'
 
-  resources :movies
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
@@ -23,7 +22,9 @@ Rails.application.routes.draw do
     
     
   resources :products
-      get 'products/:id/buying', to: 'products#buy', as: :buying
+      # get 'products/:id/buying', to: 'products#buy', as: :buying
+
+  get 'test/buy', to: 'purchases#buy'
     
   # Example resource route with options:
   #   resources :products do
