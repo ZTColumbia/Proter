@@ -9,7 +9,7 @@ class PurchasesController < ApplicationController
       res = "No Group"
       render text: res
     else
-      res = {:city => @group.city, :cur_people => @group.cur_people, :total_people => @group.total_people, :people => @group.people}
+      res = {:id => @group.id, :city => @group.city, :cur_people => @group.cur_people, :total_people => @group.total_people}
       render :json => res
     end
   end
