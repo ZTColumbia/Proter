@@ -15,10 +15,27 @@ class PurchasesController < ApplicationController
   end
 
   def buy
+
+    # general information
     @user_id = params[:user_id]
-    @product_num = params[:product_num]
     @city = params[:city]
 
+    # deal with carts
+    card = Cart.find_by(user_id: @user_id)
+
+    items_id_list = card.items.split('|')
+    for item in items_id_list
+      id = item.split('_')[0]
+      amount = item.split('_')[1]
+
+      # pour into orders
+      new_order = {:product_id => id, :user_id => @user_id, :amount => amount}
+      @order = Order.create!(new_order)
+    end
+    card.items = ""
+    card.save
+
+    # deal with shopping group
     #Get the shopping group of current city
     @group = ShoppingGroup.where(city:@city).order(id: :desc).limit(1).take
     if not @group or @group.cur_people == @group.total_people

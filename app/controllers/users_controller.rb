@@ -1,5 +1,11 @@
 class UsersController < Clearance::UsersController
 
+  def show
+    id = params[:id]
+    @user = User.find_by(id)
+    render :json => @user
+  end
+
   private
     
   def user_params
