@@ -4,6 +4,13 @@
 <ul id="details">
     
   <li>
+    image:
+    <%= image_tag @product.image_url if @product.image %>
+
+
+  </li>
+
+  <li>
     id:
     <%= @product.id %>
   </li>
@@ -68,3 +75,8 @@
   <p style="padding: 7px;"></p>  
   <%= link_to 'Back to product list', products_path, :class => 'btn btn-success col-2' %>
 </div>
+
+
+
+
+‍

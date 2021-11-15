@@ -15,7 +15,7 @@ describe ProductsController, :type => :controller do
       Product.create(name: 'test1')
       @product = Product.all
     end
-    it "Should be show a movie" do
+    it "Should be show a product" do
       get :show, id: @product.take.id
       expect(assigns(:product)).to eq(@product.take)
     end

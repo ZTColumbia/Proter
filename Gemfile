@@ -62,3 +62,5 @@ gem 'gravatar_image_tag', '~> 1.2'
 gem 'carrierwave'
 gem 'mimemagic', github: 'mimemagicrb/mimemagic', ref: '01f92d86d15d85cfd0f20dabd025dcbd36a8a60f'
 
+gem 'shrine', '~> 3.3'
+gem 'image_processing', '~> 1.12', '>= 1.12.1'

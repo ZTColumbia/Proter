@@ -1,6 +1,6 @@
 <h2>Create New Product</h2>
 
-<%= form_tag products_path, :class => 'form' do %>
+<%= form_tag products_path, :class => 'form', :enctype => 'multipart/form-data' do%>
   <%= label :product, :name, 'Name', :class => 'col-form-label' %>
   <%= text_field :product, :name, :class => 'form-control' %>
 
@@ -25,7 +25,11 @@
   <%= label :product, :box, 'Box size as WxLxH', :class => 'col-form-label' %>
   <%= text_field :product, :box, :class => 'form-control' %>
 
-  <br/>
+  <%= label :product, :image, 'Product image', :class => 'col-form-label' %>
+  <br>
+  <%= file_field :product, :image %>
+
+  <br><br/>
   <%= submit_tag 'Save Changes', :class => 'btn btn-primary' %>
   <%= link_to 'Cancel', products_path, :class => 'btn btn-secondary' %>
 <% end %>

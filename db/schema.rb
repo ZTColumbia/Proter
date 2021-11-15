@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20211114041613) do
+ActiveRecord::Schema.define(version: 20211115232220) do
 
   create_table "ar_internal_metadata", primary_key: "key", force: :cascade do |t|
     t.string   "value"
@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(version: 20211114041613) do
     t.datetime "updated_at",             null: false
     t.integer  "buy_count",  default: 0
     t.text     "avatar"
+    t.text     "image_data"
   end
 
   create_table "shopping_groups", force: :cascade do |t|
