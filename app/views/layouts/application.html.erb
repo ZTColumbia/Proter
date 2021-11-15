@@ -9,14 +9,6 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <header>
-        <% if signed_in? %>
-          Signed in as: <%= current_user.email %>
-          <%= button_to 'Sign out', sign_out_path, method: :delete %>
-        <% else %>
-          <%= link_to 'Sign in', sign_in_path %>
-        <% end %>
-    </header>
     <section>
         <div id="flash">
           <% flash.each do |key, value| %>
@@ -26,9 +18,32 @@
     </section>
       
     <%# These classes come from the Bootstrap CSS framework. %>
-    <nav class="navbar navbar-expand-lg bg-primary text-white mb-3">
-      <h1 class="title">Porter</h1>
+
+          
+    <nav class="navbar navbar-expand-lg bg-warning navbar-dark sticky-top">
+      <ul class="navbar-nav">
+        <h1 class="title is-5 text-dark">Porter </h1>
+        <div class="container" align="center">
+          <% if signed_in? %>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#">  My Order  </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="/carts/<%= current_user.id %>">  Cart  </a>
+            </li>
+          <% end %>
+        </div>
+      </ul>
     </nav>
+    <div class="card " align = center>
+        <% if signed_in? %>
+            <strong>Signed in as: <%= current_user.email%></strong>                  
+            <button type="button" class="btn btn-light" ><%= link_to 'Sign out', sign_out_path, method: :delete%></button>
+        <% else %>
+            <strong>Please sign in</strong> 
+            <button type="button" class="btn btn-light"><%= link_to 'Sign in', sign_in_path %></button>
+        <% end %>
+    </div>
     <div class="container">
       <%# Render "flash" messages in our application. This loads _flash.erb %>
       <%= render 'layouts/flash' %>

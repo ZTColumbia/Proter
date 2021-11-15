@@ -1,34 +1,21 @@
 <h2>All Products</h2>
-
-<table class="table table-striped col-md-12" id="products">
-  <thead>
-    <tr>
-      <th>Product Name</th>
-      <th>Brand</th>
-      <th>Price</th>
-      <th>Color</th>
-      <th>Details</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @products.each do |product| %>
-      <tr>
-        <td>
-          <%= product.name %>
-        </td>
-        <td>
-          <%= product.brand %>
-        </td>
-        <td>
-          <%= product.price %>
-        </td>
-        <td>
-          <%= product.color %>
-        </td>
-        <td>
-          <%= link_to "More about #{product.name}", product_path(product) %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="container">
+    <div class="card-columns">
+        <% @products.each do |product| %>
+            <div class="card" style="width:600px, padding = 50px">
+                <img class="card-img-top rounded" src="/assets/img_1.jpg" alt="Product image">
+                <div class="card-body">
+                    <h1 class="card-title"><%= product.name %></h1>
+                    <h3 class="card-text"><%= product.brand %></h3>
+                    <h2 class="card-text">$<%= product.price %></h2>
+                    <p class="card-text"><%= product.color %></p>
+                    <% if signed_in? %>
+                        <button type="button" class="btn btn-warning">
+                            <a class=" text-dark" href="/store/show/<%= product.id %>"> <%= link_to "Buy #{product.name}" %>  </a>
+                        </button>
+                    <% end %>
+                </div>
+            </div>
+        <% end %>
+    </div>
+</div>
