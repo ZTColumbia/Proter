@@ -35,7 +35,6 @@ class PurchasesController < ApplicationController
       puts people_set
       if people_set.member?(@user_id.to_s)
         flash[:notice] = "User #{@user_id} was already in the shopping group of #{@city}."
-        puts "User #{@user_id} was already in the shopping group of #{@city}."
       else
         group.cur_people = group.cur_people + 1
         new_people_string = ""
