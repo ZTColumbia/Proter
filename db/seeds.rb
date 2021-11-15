@@ -30,3 +30,9 @@ group = [{:city => 'New York', :cur_people => 3, :total_people => 10, :people =>
 group.each do |gp|
   ShoppingGroup.create!(gp)
 end
+
+cart = [{:user_id => 1, :items => "1_2_3_"},
+]
+cart.each do |c|
+  Cart.create!(c)
+end

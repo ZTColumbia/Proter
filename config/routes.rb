@@ -13,14 +13,22 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
+
+  # User Module
     resources :users,
       only: Clearance.configuration.user_actions do
         resource :password,
           controller: 'clearance/passwords',
           only: [:edit, :update]
-      end
-    
-    
+    end
+  get 'users/:id', to: 'users#show'
+
+  # Cart Module
+  get 'carts/:user_id', to: 'carts#show'
+  get 'all_carts', to: 'carts#all'
+  post 'carts', to: 'carts#create'
+
+
   resources :products
       # get 'products/:id/buying', to: 'products#buy', as: :buying
 
