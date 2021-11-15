@@ -51,9 +51,7 @@
                     <h2 class="card-text">$<%= product.price %></h2>
                     <p class="card-text"><%= product.color %></p>
                     <% if signed_in? %>
-                        <button type="button" class="btn btn-warning">
-                            <a class=" text-dark" href="/store/show/<%= product.id %>"> <%= link_to "Buy #{product.name}" %>  </a>
-                        </button>
+                        <a href="/store/<%= product.id %>" class="btn btn-warning"> <%="Buy #{product.name}" %>  </a>
                     <% end %>
                 </div>
             </div>

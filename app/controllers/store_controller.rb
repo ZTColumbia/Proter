@@ -4,7 +4,7 @@ class StoreController < ApplicationController
     end
 
     def show
-        id = params[:id]
+        id = params[:product_id]
         @product = Product.find(id)
     end
 end

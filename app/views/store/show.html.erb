@@ -1,70 +1,93 @@
 <!--  app/views/movies/show.html.erb -->
 <h2>Details about <em><%= @product.name %> <%= @product.category %></em></h2>
 
-<ul id="details">
-    
-  <li>
-    id:
-    <%= @product.id %>
-  </li>
-    
-  <li>
-    seller_id:
-    <%= @product.seller_id %>
-  </li>
-    
-  <li>
-    Brand:
-    <%= @product.brand %>
-  </li>
-    
-    
-  <li>
-    Price:
-    <%= @product.price %>
-  </li>
+<div class="container">
+    <div class="card-group">
+            <div class="card" style="width:600px, padding = 50px">
+                <img class="card-img-top rounded" src="/assets/img_1.jpg" alt="Product image">
+                <div class="card-body">
+                    <h1 class="card-title"><%= @product.name %></h1>
+                    <h3 class="card-text"><%= @product.brand %></h3>
+                    <h2 class="card-text">$<%= @product.price %></h2>
+                    <p class="card-text"><%= @product.color %></p>
+                </div>
+            </div>
+            <div class="card" style="width:600px, padding = 50px">
+                <div class="card-body">
+                    <h3>Description:</h3>
+                    <ul id="details">
+                      <li>
+                        id:
+                        <%= @product.id %>
+                      </li>
+                        
+                      <li>
+                        seller_id:
+                        <%= @product.seller_id %>
+                      </li>
+                        
+                      <li>
+                        Brand:
+                        <%= @product.brand %>
+                      </li>
+                        
+                        
+                      <li>
+                        Price:
+                        <%= @product.price %>
+                      </li>
 
-    
-  <li>
-    Discount Price:
-    <%= @product.price * @product.discount %>
-  </li>
-    
-  <li>
-    Weight:
-    <%= @product.weight%>
-  </li>
-    
-  <li>
-    Color:
-    <%= @product.color%>
-  </li>
-    
-   <li>
-    Buying quantity:
-    <%= @product.buy_count%>
-  </li>
+                        
+                      <li>
+                        Discount Price:
+                        <%= @product.price * @product.discount %>
+                      </li>
+                        
+                      <li>
+                        Weight:
+                        <%= @product.weight%>
+                      </li>
+                        
+                      <li>
+                        Color:
+                        <%= @product.color%>
+                      </li>
+                        
+                      <li>
+                        Buying quantity:
+                        <%= @product.buy_count%>
+                      </li>
 
-  <li>
-    Added date:
-    <%= @product.created_at.strftime("%B %d, %Y") %>
-  </li>
-    
-  <li>
-    Updated date:
-    <%= @product.updated_at.strftime("%B %d, %Y") %>
-  </li>
-</ul>
+                      <li>
+                        Added date:
+                        <%= @product.created_at.strftime("%B %d, %Y") %>
+                      </li>
+                        
+                      <li>
+                        Updated date:
+                        <%= @product.updated_at.strftime("%B %d, %Y") %>
+                      </li>
 
-<h3>Description:</h3>
-<p id="packaging box size">
-  <%= @product.box %>
-</p>
-
-<div class="row">
-  <%= link_to 'Edit', edit_product_path(@product), :class => 'btn btn-warning col-2' %>
-  <p style="padding: 7px;"></p>  
-  <%= link_to 'Delete', product_path(@product), 'data-method' => 'delete', 'data-confirm' => 'Are you sure?', :class => 'btn btn-danger col-2' %>
-  <p style="padding: 7px;"></p>  
-  <%= link_to 'Back to product list', products_path, :class => 'btn btn-success col-2' %>
+                      <li>
+                        Box size:
+                       <%= @product.box %>
+                      </li>
+                    </ul>
+                </div>
+                <div class="row">
+                      <p style="padding: 15px;"></p>  
+                        <%= link_to 'Buy', buy_path(@product), :class => 'btn btn-danger col-2' %>
+                      <p style="padding: 7px;"></p>  
+                      <a href="/store/" class="btn btn-warning"> Back to Products </a>
+                </div>
+                <p style="padding: 5px;"></p>  
+            </div>
+    </div>
 </div>
+
+
+
+
+
+
+

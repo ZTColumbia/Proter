@@ -38,4 +38,7 @@ Rails.application.routes.draw do
   post 'buy', to: 'purchases#buy'
   get 'group/:city', to: 'purchases#group'
 
+  #Store Pages
+  get 'store/:product_id', to: 'store#show'
+  get 'store/', to: 'store#index'
 end
