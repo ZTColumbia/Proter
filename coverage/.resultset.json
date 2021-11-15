@@ -7,6 +7,18 @@
           null
         ]
       },
+      "/home/codio/workspace/Proter/app/helpers/products_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/home/codio/workspace/Proter/app/helpers/store_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
       "/home/codio/workspace/Proter/app/controllers/carts_controller.rb": {
         "lines": [
           1,
@@ -113,6 +125,18 @@
         "lines": [
           1,
           1,
+          null
+        ]
+      },
+      "/home/codio/workspace/Proter/app/controllers/orders_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
           null
         ]
       },
@@ -246,6 +270,20 @@
           null
         ]
       },
+      "/home/codio/workspace/Proter/app/controllers/stores_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/home/codio/workspace/Proter/app/controllers/users_controller.rb": {
         "lines": [
           1,
@@ -292,6 +330,6 @@
         ]
       }
     },
-    "timestamp": 1636946261
+    "timestamp": 1637016504
   }
 }
