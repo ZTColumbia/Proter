@@ -7,6 +7,96 @@
           null
         ]
       },
+      "/home/codio/workspace/Proter/app/controllers/carts_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          2,
+          2,
+          2,
+          null,
+          2,
+          2,
+          1,
+          1,
+          1,
+          null,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          null,
+          2,
+          null,
+          2,
+          2,
+          3,
+          null,
+          2,
+          2,
+          2,
+          null,
+          2,
+          null,
+          null,
+          1,
+          2,
+          2,
+          null,
+          null,
+          null,
+          2,
+          1,
+          1,
+          1,
+          null,
+          null,
+          2,
+          2,
+          2,
+          2,
+          1,
+          1,
+          1,
+          null,
+          null,
+          2,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/codio/workspace/Proter/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/codio/workspace/Proter/app/models/cart.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/home/codio/workspace/Proter/app/models/order.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
       "/home/codio/workspace/Proter/app/models/product.rb": {
         "lines": [
           1,
@@ -83,16 +173,6 @@
           null
         ]
       },
-      "/home/codio/workspace/Proter/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
       "/home/codio/workspace/Proter/app/controllers/purchases_controller.rb": {
         "lines": [
           1,
@@ -112,9 +192,26 @@
           null,
           null,
           1,
+          null,
+          null,
           3,
           3,
+          null,
+          null,
           3,
+          null,
+          3,
+          3,
+          6,
+          6,
+          null,
+          null,
+          6,
+          6,
+          null,
+          3,
+          3,
+          null,
           null,
           null,
           3,
@@ -154,6 +251,12 @@
           1,
           null,
           1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
           null,
           1,
           11,
@@ -189,6 +292,6 @@
         ]
       }
     },
-    "timestamp": 1636869199
+    "timestamp": 1636946261
   }
 }
