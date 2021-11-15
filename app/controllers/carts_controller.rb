@@ -16,6 +16,7 @@ class CartsController < ApplicationController
       @new_card = Cart.create!(new_card)
       puts "A new cart of #{@new_card.user_id} was successfully created."
     end
+    card = Cart.find_by(user_id: user_id)
     item_list = card.items.split('|')
     item_map = {}
     for item in item_list
