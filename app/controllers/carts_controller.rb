@@ -8,7 +8,7 @@ class CartsController < ApplicationController
   def create
     user_id = params[:user_id]
     product_id = params[:product_id]
-    amount = params[:amount]
+    amount = params[:amount].to_i
 
     card = Cart.find_by(user_id: user_id)
     if not card
@@ -49,6 +49,7 @@ class CartsController < ApplicationController
       puts "A new cart of #{@new_card.user_id} was successfully created."
     end
 
+    @card = Cart.find_by(user_id: user_id)
     @res = []
     items_id_list = @card.items.split('|')
     for item in items_id_list

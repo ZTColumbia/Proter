@@ -4,7 +4,7 @@ ruby '2.6.6'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.11'
-gem "factory_girl_rails"
+gem "factory_bot_rails"
 gem 'simplecov', require: false, group: :test
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
