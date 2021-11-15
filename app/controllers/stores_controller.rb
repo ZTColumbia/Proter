@@ -1,10 +1,10 @@
-class StoreController < ApplicationController
+class StoresController < ApplicationController
     def index
         @products = Product.all
     end
 
     def show
-        id = params[:product_id]
+        id = params[:id]
         @product = Product.find(id)
     end
 end
