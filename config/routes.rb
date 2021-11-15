@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'store#index'
+  root 'stores#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -28,6 +28,9 @@ Rails.application.routes.draw do
   get 'all_carts', to: 'carts#all'
   post 'carts', to: 'carts#create'
 
+  # Order Module
+  get 'orders/:user_id', to: 'orders#show'
+
 
   resources :products
       # get 'products/:id/buying', to: 'products#buy', as: :buying
@@ -39,6 +42,6 @@ Rails.application.routes.draw do
   get 'group/:city', to: 'purchases#group'
 
   #Store Pages
-  get 'store/:product_id', to: 'store#show'
-  get 'store/', to: 'store#index'
+  get 'stores/:product_id', to: 'store#show'
+  get 'stores/', to: 'store#index'
 end
