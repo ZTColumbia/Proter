@@ -54,3 +54,11 @@ group :production do
   gem 'rails_12factor'
 end
 
+
+gem 'bulma-rails', '~> 0.6.1'
+gem 'simple_form', '~> 3.0'
+gem 'devise', '~> 4.7'
+gem 'gravatar_image_tag', '~> 1.2'
+gem 'carrierwave'
+gem 'mimemagic', github: 'mimemagicrb/mimemagic', ref: '01f92d86d15d85cfd0f20dabd025dcbd36a8a60f'
+
