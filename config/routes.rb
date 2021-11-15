@@ -28,6 +28,9 @@ Rails.application.routes.draw do
   get 'all_carts', to: 'carts#all'
   post 'carts', to: 'carts#create'
 
+  # Order Module
+  get 'orders/:user_id', to: 'orders#show'
+
 
   resources :products
       # get 'products/:id/buying', to: 'products#buy', as: :buying
