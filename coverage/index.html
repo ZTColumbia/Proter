@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-11-16T05:53:54+00:00">2021-11-16T05:53:54+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-11-16T06:18:40+00:00">2021-11-16T06:18:40+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  98.33%
+  98.37%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.48
+         1.45
        </span>
     </span> hits/line
     )
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>180</b> relevant lines,
-    <span class="green"><b>177</b> lines covered</span> and
+    <b>184</b> relevant lines,
+    <span class="green"><b>181</b> lines covered</span> and
     <span class="red"><b>3</b> lines missed. </span>
     (<span class="green">
-  98.33%
+  98.37%
 </span>
 )
   </div>
@@ -83,12 +83,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#d09601d5344a47774bd41d51892b6fdabf73b7a3" class="src_link" title="app/controllers/carts_controller.rb">app/controllers/carts_controller.rb</a></td>
-            <td class="green strong cell--number t-file__coverage">97.73 %</td>
-            <td class="cell--number">69</td>
-            <td class="cell--number">44</td>
-            <td class="cell--number">43</td>
+            <td class="green strong cell--number t-file__coverage">97.92 %</td>
+            <td class="cell--number">73</td>
+            <td class="cell--number">48</td>
+            <td class="cell--number">47</td>
             <td class="cell--number">1</td>
-            <td class="cell--number">1.66</td>
+            <td class="cell--number">1.54</td>
             
           </tr>
         
@@ -258,14 +258,14 @@
     <span class="group_name">Controllers</span>
     (<span class="covered_percent">
       <span class="green">
-  99.39%
+  99.41%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.53
+         1.5
        </span>
     </span> hits/line
     )
@@ -278,11 +278,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>165</b> relevant lines,
-    <span class="green"><b>164</b> lines covered</span> and
+    <b>169</b> relevant lines,
+    <span class="green"><b>168</b> lines covered</span> and
     <span class="red"><b>1</b> lines missed. </span>
     (<span class="green">
-  99.39%
+  99.41%
 </span>
 )
   </div>
@@ -318,12 +318,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#d09601d5344a47774bd41d51892b6fdabf73b7a3" class="src_link" title="app/controllers/carts_controller.rb">app/controllers/carts_controller.rb</a></td>
-            <td class="green strong cell--number t-file__coverage">97.73 %</td>
-            <td class="cell--number">69</td>
-            <td class="cell--number">44</td>
-            <td class="cell--number">43</td>
+            <td class="green strong cell--number t-file__coverage">97.92 %</td>
+            <td class="cell--number">73</td>
+            <td class="cell--number">48</td>
+            <td class="cell--number">47</td>
             <td class="cell--number">1</td>
-            <td class="cell--number">1.66</td>
+            <td class="cell--number">1.54</td>
             
           </tr>
         
@@ -1005,7 +1005,7 @@
     <h3>app/controllers/carts_controller.rb</h3>
     <h4>
       <span class="green">
-  97.73%
+  97.92%
 </span>
 
       lines covered
@@ -1014,8 +1014,8 @@
     
 
     <div class="t-line-summary">
-      <b>44</b> relevant lines.
-      <span class="green"><b>43</b> lines covered</span> and
+      <b>48</b> relevant lines.
+      <span class="green"><b>47</b> lines covered</span> and
       <span class="red"><b>1</b> lines missed.</span>
     </div>
 
@@ -1561,7 +1561,7 @@
 
             
 
-            <code class="ruby">      new_card = {:user_id =&gt; user_id, :items =&gt; []}</code>
+            <code class="ruby">      new_card = {:user_id =&gt; user_id, :items =&gt; nil}</code>
           </li>
         </div>
       
@@ -1638,40 +1638,40 @@
 
             
 
-            <code class="ruby">    items_id_list = @card.items.split(&#39;|&#39;)</code>
+            <code class="ruby">    if @card.items</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="57">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="1" data-linenumber="57">
+            <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    for item in items_id_list</code>
+            <code class="ruby">      items_id_list = @card.items.split(&#39;|&#39;)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="58">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="1" data-linenumber="58">
+            <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">      id, number = item.split(&#39;_&#39;)</code>
+            <code class="ruby">      for item in items_id_list</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="59">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="1" data-linenumber="59">
+            <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">      product = Product.find(id)</code>
+            <code class="ruby">        id, number = item.split(&#39;_&#39;)</code>
           </li>
         </div>
       
@@ -1682,51 +1682,51 @@
 
             
 
-            <code class="ruby">      @res[product] = number</code>
+            <code class="ruby">        puts 666</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="61">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="61">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    end</code>
+            
+
+            <code class="ruby">        puts item == &#39;[]&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="62">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="62">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">        puts 666</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="63">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="63">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    # render :json =&gt; @res</code>
+            
+
+            <code class="ruby">        product = Product.find(id)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="64">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="64">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  end</code>
+            
+
+            <code class="ruby">        @res[product] = number</code>
           </li>
         </div>
       
@@ -1737,29 +1737,29 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">      end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="66">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="66">
+            
             
 
             
 
-            <code class="ruby">  def cart_params</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="67">
+          <li class="never" data-hits="" data-linenumber="67">
             
             
 
             
 
-            <code class="ruby">    params.permit(:amount, :product_id, :image, :cart_id)</code>
+            <code class="ruby">    # render :json =&gt; @res</code>
           </li>
         </div>
       
@@ -1776,6 +1776,50 @@
       
         <div>
           <li class="never" data-hits="" data-linenumber="69">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="70">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def cart_params</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="71">
+            
+            
+
+            
+
+            <code class="ruby">    params.permit(:amount, :product_id, :image, :cart_id)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="72">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="73">
             
             
 

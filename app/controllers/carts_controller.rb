@@ -46,21 +46,28 @@ class CartsController < ApplicationController
     # create the card of current user if not exist
     # itemId1_amount|itemId2_amount
     if not @card
-      new_card = {:user_id => user_id, :items => []}
+      new_card = {:user_id => user_id, :items => nil}
       @new_card = Cart.create!(new_card)
       puts "A new cart of #{@new_card.user_id} was successfully created."
     end
 
     @card = Cart.find_by(user_id: user_id)
     @res = {}
-    items_id_list = @card.items.split('|')
-    for item in items_id_list
-      id, number = item.split('_')
-      product = Product.find(id)
-      @res[product] = number
+    if @card.items
+      items_id_list = @card.items.split('|')
+      for item in items_id_list
+        id, number = item.split('_')
+        puts 666
+        puts item == '[]'
+        puts 666
+        product = Product.find(id)
+        @res[product] = number
+      end
     end
-
     # render :json => @res
   end
 
+  def cart_params
+    params.permit(:amount, :product_id, :image, :cart_id)
+  end
 end
