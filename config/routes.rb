@@ -31,7 +31,7 @@ Rails.application.routes.draw do
   post 'carts', to: 'carts#create'
 
   # Order Module
-  get 'orders/:user_id', to: 'orders#show'
+  get 'orders', to: 'orders#show'
 
 
   resources :products
