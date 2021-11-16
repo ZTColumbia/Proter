@@ -21,7 +21,7 @@ class PurchasesController < ApplicationController
 
     # general information
     @user_id = current_user.id
-    user = User.find(id)
+    user = current_user
     @city = user.city
 
     # deal with carts

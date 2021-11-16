@@ -1,4 +1,5 @@
 require 'rails_helper'
+require "spec_helper"
 
 describe PurchasesController, :type => :controller do
     context "Have citys to group" do
@@ -22,6 +23,7 @@ describe PurchasesController, :type => :controller do
     context "Not have citys to buy" do
         before :each do
           Cart.create(user_id: '1', items: "1_1|2_2")
+          sign_in
         end
         it "Should be post a shoppinggroup" do
           post :buy, {:user_id => "1", :city => "New York"}
@@ -33,6 +35,7 @@ describe PurchasesController, :type => :controller do
         before :each do
           ShoppingGroup.create(city: 'San Francisco', cur_people: '1', total_people: '2', people: 'Alice_Bob')
           Cart.create(user_id: '1', items: "1_1|2_2")
+          sign_in
         end
         it "Should be post a shoppinggroup" do
           post :buy, {:user_id => "1", :product_num => "1", :city => "San Francisco"}
@@ -44,6 +47,7 @@ describe PurchasesController, :type => :controller do
         before :each do
           ShoppingGroup.create(city: 'San Francisco', cur_people: '1', total_people: '2', people: '1_2')
           Cart.create(user_id: '1', items: "1_1|2_2")
+          sign_in
         end
         it "Should be post a shoppinggroup" do
           post :buy, {:user_id => "1", :product_num => "1", :city => "San Francisco"}
