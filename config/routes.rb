@@ -40,7 +40,7 @@ Rails.application.routes.draw do
 
   #General Control
   #For Shopping Group
-  post 'buy', to: 'purchases#buy'
+  get 'buy', to: 'purchases#buy'
   get 'group/:city', to: 'purchases#group'
 
   #Store Pages
