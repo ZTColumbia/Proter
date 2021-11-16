@@ -68,8 +68,7 @@ class PurchasesController < ApplicationController
         puts "User #{@user_id} was added into the shopping group of #{@city}."
       end
     end
-    return @city,@group,@order
-    # render :json => @city
+    redirect_to orders_path
   end
 
   def show
