@@ -20,8 +20,9 @@ class PurchasesController < ApplicationController
   def buy
 
     # general information
-    @user_id = params[:user_id]
-    @city = params[:city]
+    @user_id = current_user.id
+    user = User.find(id)
+    @city = user.city
 
     # deal with carts
     card = Cart.find_by(user_id: @user_id)
