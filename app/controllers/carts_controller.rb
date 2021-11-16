@@ -46,7 +46,7 @@ class CartsController < ApplicationController
     # create the card of current user if not exist
     # itemId1_amount|itemId2_amount
     if not @card
-      new_card = {:user_id => user_id, :items => ""}
+      new_card = {:user_id => user_id, :items => []}
       @new_card = Cart.create!(new_card)
       puts "A new cart of #{@new_card.user_id} was successfully created."
     end

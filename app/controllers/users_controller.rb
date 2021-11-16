@@ -1,5 +1,11 @@
 class UsersController < Clearance::UsersController
-
+  def profile
+    id = params[:id]
+    @user = User.find(id)
+  end
+  def edit
+    @user = User.find params[:id]
+  end
   def show
     id = params[:id]
     @user = User.find_by(id)

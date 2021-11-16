@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20211115232220) do
+=======
+ActiveRecord::Schema.define(version: 20211114041613) do
+>>>>>>> 2c2d914b02cf2b55347f59b70d4fd2f3aff19b71
 
   create_table "carts", force: :cascade do |t|
     t.integer  "user_id"

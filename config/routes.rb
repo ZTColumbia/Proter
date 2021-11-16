@@ -22,7 +22,9 @@ Rails.application.routes.draw do
           only: [:edit, :update]
     end
   get 'users/:id', to: 'users#show'
-
+  get 'users/:id/profile', to: 'users#profile', as: :profile
+  get 'users/:id/edit', to: 'users#edit', as: :edit_user
+    
   # Cart Module
   get "/carts", to: 'carts#show'
   get 'all_carts', to: 'carts#all'
