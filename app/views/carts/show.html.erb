@@ -23,7 +23,7 @@
           <%= product.brand %>
         </td>
         <td>
-          <%= product.price %>
+          $ <%= product.price %>
         </td>
         <td>
           <%= product.color %>
@@ -32,7 +32,7 @@
           <%= amount %>
         </td>
         <td>
-          <%= product.price * amount.to_f %>
+          $ <%= product.price * amount.to_f %>
         </td>
       </tr>
     <% end %>
@@ -40,5 +40,7 @@
 </table>
 
 <div class="row">
-  <%= link_to 'Checkout', buy_path(@card), 'data-method' => 'checkout', 'data-confirm' => 'Are you sure?', :class => 'btn btn-danger col-2' %> 
+  <%= link_to 'Checkout', buy_path(@card), 'data-method' => 'delete', 'data-confirm' => 'Are you sure?', :class => 'btn btn-danger col-2' %> 
+  <p style="padding: 7px;"></p>  
+  <%= link_to 'Buy More', root_path, :class => 'btn btn-warning col-2' %>
 </div>
