@@ -1,5 +1,74 @@
-<h2>Order History</h2>
+<br/>
+<h2>Order Progress</h2>
 
-<% @order.each do |product_id, amount| %>
+
+<% group = @combined_order["group"] %>
+<% products = @combined_order["products"] %>
+
+<div align="center">
+    <div class="card" style="width: 100%;" align="left" >
+
+        <table class="table table-striped col-md-12" id="products">
+        <thead>
+            <tr>
+            <th>Product Name</th>
+            <th>Brand</th>
+            <th>Unit Price</th>
+            <th>Discount</th>
+            <th>Color</th>
+            <th>Amount</th>
+            <th>Total Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% products.each do |product, amount| %>
+            <tr>
+                <td>
+                <%= product.name %>
+                </td>
+                <td>
+                <%= product.brand %>
+                </td>
+                <td>
+                $ <%= product.price %>
+                </td>
+                <td>
+                <%= (1 - product.discount).round(2)*100 %> %
+                </td>
+                <td>
+                <%= product.color %>
+                </td>
+                <td>
+                <%= amount %>
+                </td>
+                <td>
+                $ <%= (product.price * amount.to_f * product.discount).round(2)%>
+                </td>
+            </tr>
+            <% end %>
+        </tbody>
+        </table>
+
+        <div class="card-body">
+            <h2>Parcel Group</h2>
+            <ul class="list-group">
+                
+                <li class="list-group-item warning">City: <%= group.city %></li>
+                <li class="list-group-item">Created_at: <%= group.created_at %></li>
+                <li class="list-group-item">People in Group: <%= group.cur_people %>  /  <%= group.total_people %> </li>
+            </ul>
+            <br/>
+            <h2>Container progress</h2>
+            <h2><%= 100*group.cur_people.to_f/group.total_people %>%</h2>
+            <div class="progress">
+            <div class="progress-bar progress-bar-striped" style="width:<%= 100*group.cur_people.to_f/group.total_people %>%"></div>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <%= link_to 'Buy More', root_path, :class => 'btn btn-warning col-2' %>
+</div>
+
+
 
 

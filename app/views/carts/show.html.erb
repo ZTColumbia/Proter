@@ -8,6 +8,7 @@
       <th>Product Name</th>
       <th>Brand</th>
       <th>Unit Price</th>
+      <th>Discount</th>
       <th>Color</th>
       <th>Amount</th>
       <th>Total Price</th>
@@ -26,13 +27,16 @@
           $ <%= product.price %>
         </td>
         <td>
+        <%= (1 - product.discount).round(2)*100 %> %
+        </td>
+        <td>
           <%= product.color %>
         </td>
         <td>
           <%= amount %>
         </td>
         <td>
-          $ <%= product.price * amount.to_f %>
+          $ <%= (product.price * amount.to_f * product.discount).round(2)%>
         </td>
       </tr>
     <% end %>
