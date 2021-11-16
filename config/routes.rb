@@ -35,7 +35,6 @@ Rails.application.routes.draw do
   resources :purchases
   resources :orders
 
-
   resources :products
       # get 'products/:id/buying', to: 'products#buy', as: :buying
   resources :stores
