@@ -1,4 +1,5 @@
 require 'rails_helper'
+require "spec_helper"
 
 describe CartsController, :type => :controller do
     describe "GET #all" do
@@ -9,6 +10,9 @@ describe CartsController, :type => :controller do
     end
     
    context "Cart not exists" do
+       before :each do
+          sign_in
+       end
        it "Should be post a cart" do
           post :create, {:user_id => "2", :product_id => "1", :amount => "1"}
           expect(response).to be_truthy
@@ -18,6 +22,7 @@ describe CartsController, :type => :controller do
    context "Cart exists" do
         before :each do
           Cart.create(user_id: '1', items: "1_1|2_2")
+          sign_in
         end
         it "Should be post a cart" do
           post :create, {:user_id => "1", :product_id => "1", :amount => "1"}
@@ -26,6 +31,11 @@ describe CartsController, :type => :controller do
    end
     
    context "Cart not exists in show" do
+       before :each do
+          Product.create(name: 'test1')
+          @product = Product.all
+          sign_in
+       end
        it "Should be post a cart" do
           get :show, user_id: "2"
           expect(response).to be_truthy
@@ -37,6 +47,7 @@ describe CartsController, :type => :controller do
           Product.create(name: 'test1')
           @product = Product.all
           Cart.create(user_id: '1', items: "1_1")
+          sign_in
         end
         it "Should be post a cart" do
           get :show, user_id: "1"

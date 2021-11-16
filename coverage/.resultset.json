@@ -57,6 +57,8 @@
           2,
           2,
           null,
+          null,
+          null,
           2,
           null,
           null,
@@ -76,13 +78,16 @@
           2,
           2,
           2,
-          1,
-          1,
-          1,
-          null,
-          null,
           2,
+          2,
+          1,
           null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
           null,
           null
         ]
@@ -112,6 +117,20 @@
       "/home/codio/workspace/Proter/app/models/product.rb": {
         "lines": [
           1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/home/codio/workspace/Proter/app/uploaders/image_uploader.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          0,
+          0,
+          null,
           null
         ]
       },
@@ -132,6 +151,10 @@
         "lines": [
           1,
           null,
+          1,
+          1,
+          1,
+          1,
           1,
           1,
           1,
@@ -201,6 +224,9 @@
         "lines": [
           1,
           1,
+          null,
+          1,
+          null,
           null,
           1,
           2,
@@ -287,6 +313,12 @@
       "/home/codio/workspace/Proter/app/controllers/users_controller.rb": {
         "lines": [
           1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
           null,
           1,
           1,
@@ -330,6 +362,6 @@
         ]
       }
     },
-    "timestamp": 1637016504
+    "timestamp": 1637042034
   }
 }

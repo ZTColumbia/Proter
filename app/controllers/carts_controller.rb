@@ -63,7 +63,4 @@ class CartsController < ApplicationController
     # render :json => @res
   end
 
-  def cart_params
-    params.permit(:amount, :product_id, :image, :cart_id)
-  end
 end
