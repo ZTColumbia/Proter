@@ -1,7 +1,7 @@
 #API:
 ##Order
 ###show
-1. url: http://0.0.0.0:3000/orders/:user_id
+1. url: http://0.0.0.0:3000/orders/
 2. method: GET
 
 ##Cart

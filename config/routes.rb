@@ -40,11 +40,15 @@ Rails.application.routes.draw do
 
   #General Control
   #For Shopping Group
-  post 'buy', to: 'purchases#buy'
+  get 'buy', to: 'purchases#buy'
   get 'group/:city', to: 'purchases#group'
 
   #Store Pages
   get 'stores/:product_id', to: 'stores#show'
   get 'stores/', to: 'stores#index'
+
+  resources :purchases
+  get "/purchases", to: 'purchases#show'
+
 
 end
