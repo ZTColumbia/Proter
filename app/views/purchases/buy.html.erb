@@ -1,0 +1,29 @@
+<h2>Order History</h2>
+
+
+<li>
+City:
+<%= @group.city %>
+</li>
+
+<li>
+created_at:
+<%= @group.created_at %>
+</li>
+
+<li>
+total_people:
+<%= @group.total_people %>
+</li>
+
+<li>
+cur_people:
+<%= @group.cur_people %>
+</li>
+
+
+<h2>Container progress</h2>
+<h2><%= 100*@group.cur_people.to_f/@group.total_people %>%</h2>
+<div class="progress">
+  <div class="progress-bar progress-bar-striped" style="width:<%= 100*@group.cur_people.to_f/@group.total_people %>%"></div>
+</div>

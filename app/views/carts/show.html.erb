@@ -40,7 +40,7 @@
 </table>
 
 <div class="row">
-  <%= link_to 'Checkout', buy_path(@card), 'data-method' => 'delete', 'data-confirm' => 'Are you sure?', :class => 'btn btn-danger col-2' %> 
-  <p style="padding: 7px;"></p>  
+  <%= link_to 'Checkout', buy_path, 'buy-confirm' => 'Are you sure?', :class => 'btn btn-danger col-2' %> 
+  <p style="padding: 7px;"></p>
   <%= link_to 'Buy More', root_path, :class => 'btn btn-warning col-2' %>
 </div>
