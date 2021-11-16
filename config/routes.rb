@@ -22,9 +22,11 @@ Rails.application.routes.draw do
           only: [:edit, :update]
     end
   get 'users/:id', to: 'users#show'
-
+  get 'users/:id/profile', to: 'users#profile', as: :profile
+  get 'users/:id/edit', to: 'users#edit', as: :edit_user
+    
   # Cart Module
-  get 'carts/:user_id', to: 'carts#show'
+  get "/carts", to: 'carts#show'
   get 'all_carts', to: 'carts#all'
   post 'carts', to: 'carts#create'
 
@@ -42,6 +44,7 @@ Rails.application.routes.draw do
   get 'group/:city', to: 'purchases#group'
 
   #Store Pages
-  get 'stores/:product_id', to: 'store#show'
-  get 'stores/', to: 'store#index'
+  get 'stores/:product_id', to: 'stores#show'
+  get 'stores/', to: 'stores#index'
+
 end

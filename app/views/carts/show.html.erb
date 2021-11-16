@@ -1,1 +1,46 @@
-<title>show cart</title>
+<h2>Current Cart</h2>
+
+
+
+<table class="table table-striped col-md-12" id="products">
+  <thead>
+    <tr>
+      <th>Product Name</th>
+      <th>Brand</th>
+      <th>Unit Price</th>
+      <th>Color</th>
+      <th>Amount</th>
+      <th>Total Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @res.each do |product, amount| %>
+      <tr>
+        <td>
+          <%= product.name %>
+        </td>
+        <td>
+          <%= product.brand %>
+        </td>
+        <td>
+          $ <%= product.price %>
+        </td>
+        <td>
+          <%= product.color %>
+        </td>
+        <td>
+          <%= amount %>
+        </td>
+        <td>
+          $ <%= product.price * amount.to_f %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<div class="row">
+  <%= link_to 'Checkout', buy_path(@card), 'data-method' => 'delete', 'data-confirm' => 'Are you sure?', :class => 'btn btn-danger col-2' %> 
+  <p style="padding: 7px;"></p>  
+  <%= link_to 'Buy More', root_path, :class => 'btn btn-warning col-2' %>
+</div>

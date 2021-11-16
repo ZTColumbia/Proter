@@ -4,7 +4,9 @@
 <div class="container">
     <div class="card-group">
             <div class="card" style="width:600px, padding = 50px">
-                <img class="card-img-top rounded" src="/assets/img_1.jpg" alt="Product image">
+                <div class="feature-image card-img-top rounded">
+                  <%= image_tag(@product.image_url, :size => "530x530") if @product.image%>
+                </div>
                 <div class="card-body">
                     <h1 class="card-title"><%= @product.name %></h1>
                     <h3 class="card-text"><%= @product.brand %></h3>
@@ -22,11 +24,6 @@
                       </li>
                         
                       <li>
-                        seller_id:
-                        <%= @product.seller_id %>
-                      </li>
-                        
-                      <li>
                         Brand:
                         <%= @product.brand %>
                       </li>
@@ -34,38 +31,23 @@
                         
                       <li>
                         Price:
-                        <%= @product.price %>
+                        $ <%= @product.price %>
                       </li>
 
                         
                       <li>
                         Discount Price:
-                        <%= @product.price * @product.discount %>
+                        $ <%= @product.price * @product.discount %>
                       </li>
                         
                       <li>
                         Weight:
-                        <%= @product.weight%>
+                        <%= @product.weight%> lbs
                       </li>
                         
                       <li>
                         Color:
                         <%= @product.color%>
-                      </li>
-                        
-                      <li>
-                        Buying quantity:
-                        <%= @product.buy_count%>
-                      </li>
-
-                      <li>
-                        Added date:
-                        <%= @product.created_at.strftime("%B %d, %Y") %>
-                      </li>
-                        
-                      <li>
-                        Updated date:
-                        <%= @product.updated_at.strftime("%B %d, %Y") %>
                       </li>
 
                       <li>
@@ -74,13 +56,16 @@
                       </li>
                     </ul>
                 </div>
-                <div class="row">
-                      <p style="padding: 15px;"></p>  
-                        <%= link_to 'Buy', buy_path(@product), :class => 'btn btn-danger col-2' %>
-                      <p style="padding: 7px;"></p>  
-                      <a href="/store/" class="btn btn-warning"> Back to Products </a>
+                <div style="padding: 35px;">
+                  <%= form_tag carts_path, :class => 'form', :enctype => 'multipart/form-data' do%>
+                    <%= hidden_field_tag :product_id, value = @product.id %>
+                    <%= hidden_field_tag :user_id, value = current_user.id %>
+                    <%= hidden_field_tag :amount, value = 1 %>
+                    <br><br/>
+                    <%= submit_tag 'Add to Cart', :class => 'btn btn-danger' %>
+                    <a href="/stores/" class="btn btn-warning"> Back to Products </a>
+                  <% end %>
                 </div>
-                <p style="padding: 5px;"></p>  
             </div>
     </div>
 </div>
@@ -90,4 +75,5 @@
 
 
 
+  
 
