@@ -1,1 +1,11 @@
-<title>show cart</title>
+<h2>Current Cart</h2>
+
+<ul id="details">
+  <li>
+    id:
+    <%= @cart.id %>
+  </li>
+    
+<div class="row">
+  <%= link_to 'Buy', buy_path(@cart), 'data-method' => 'delete', 'data-confirm' => 'Are you sure?', :class => 'btn btn-danger col-2' %> 
+</div>

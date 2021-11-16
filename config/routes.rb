@@ -42,6 +42,10 @@ Rails.application.routes.draw do
   get 'group/:city', to: 'purchases#group'
 
   #Store Pages
-  get 'stores/:product_id', to: 'store#show'
-  get 'stores/', to: 'store#index'
+  get 'stores/:product_id', to: 'stores#show'
+  get 'stores/', to: 'stores#index'
+  
+  #Cart Pages
+  get "/carts", to: 'carts#show'
+
 end

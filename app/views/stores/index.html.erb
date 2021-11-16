@@ -44,14 +44,16 @@
     <div class="card-columns">
         <% @products.each do |product| %>
             <div class="card" style="width:600px, padding = 30px">
-                <img class="card-img-top rounded" src="/assets/img_1.jpg" alt="Product image">
+                <div class="feature-image card-img-top rounded">
+                  <%= image_tag(product.image_url, :size => "340x340") if product.image%>
+                </div>
                 <div class="card-body">
                     <h1 class="card-title"><%= product.name %></h1>
                     <h3 class="card-text"><%= product.brand %></h3>
                     <h2 class="card-text">$<%= product.price %></h2>
                     <p class="card-text"><%= product.color %></p>
                     <% if signed_in? %>
-                        <a href="/store/<%= product.id %>" class="btn btn-warning"> <%="Buy #{product.name}" %>  </a>
+                        <a href="/stores/<%= product.id %>" class="btn btn-warning"> <%="Buy #{product.name}" %>  </a>
                     <% end %>
                 </div>
             </div>

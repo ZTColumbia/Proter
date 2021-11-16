@@ -18,6 +18,8 @@
    "amount": 1
    }
 
+   
+
 ##Shopping Group
 ###buy
 1. url: http://0.0.0.0:3000/buy
