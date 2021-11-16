@@ -1,56 +1,57 @@
 <!--  app/views/users/profile.html.erb -->
 <h2>Details about <em><%= @user.email %></em></h2>
+<div class="jumbotron">
+  <ul id="details">
+      
+    <li>
+      id:
+      <%= @user.id %>
+    </li>
+      
+    <li>
+      email:
+      <%= @user.email %>
+    </li>
+      
+    <li>
+      first name:
+      <%= @user.first_name %>
+    </li>
 
-<ul id="details">
-    
-  <li>
-    id:
-    <%= @user.id %>
-  </li>
-    
-  <li>
-    email:
-    <%= @user.email %>
-  </li>
-    
-  <li>
-    first name:
-    <%= @user.first_name %>
-  </li>
-    
-    
-  <li>
-    last name:
-    <%= @user.last_name %>
-  </li>
+      
+    <li>
+      last name:
+      <%= @user.last_name %>
+    </li>
 
-    
-  <li>
-    address:
-    <%= @user.address %>
-  </li>
-    
-  <li>
-    city:
-    <%= @user.city%>
-  </li>
-    
-  <li>
-    state:
-    <%= @user.state%>
-  </li>
-    
+      
+    <li>
+      address:
+      <%= @user.address %>
+    </li>
+      
+    <li>
+      city:
+      <%= @user.city%>
+    </li>
+      
+    <li>
+      state:
+      <%= @user.state%>
+    </li>
 
-
-</ul>
-
+  </ul>
+</div>
 <h3>Description:</h3>
     <li>
         created at:
         <%= @user.created_at%>
     </li>
+<p style="padding: 7px;"></p>
 <div class="row">
-
+  <p style="padding: 7px;"></p>
   <%= link_to 'Edit', edit_user_path(@user), :class => 'btn btn-warning' %>
+  <p style="padding: 7px;"></p>
   <%= link_to 'Back to Main Menu', root_path, :class => 'btn btn-warning' %>
 </div>
+
