@@ -6,8 +6,8 @@
     height: 100%;
   }
   .card img {
-    width: 350px;
-    height: 350px;
+    width: 340px;
+    height: 340px;
   }
   </style>
 </head>
@@ -49,7 +49,7 @@
         <% @products.each do |product| %>
             <div class="card" style="width:600px, padding = 30px">
                 <div class="feature-image card-img-top rounded">
-                  <%= image_tag(product.image_url, :size => "340x340") if product.image%>
+                  <%= image_tag(product.image_url, :size => "330x330") if product.image%>
                 </div>
                 <div class="card-body">
                     <h1 class="card-title"><%= product.name %></h1>
