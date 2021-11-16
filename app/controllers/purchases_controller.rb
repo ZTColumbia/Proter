@@ -21,7 +21,7 @@ class PurchasesController < ApplicationController
 
     # general information
     @user_id = current_user.id
-    user = User.find(id)
+    user = User.find(@user_id)
     @city = user.city
 
     # deal with carts
@@ -68,7 +68,7 @@ class PurchasesController < ApplicationController
         puts "User #{@user_id} was added into the shopping group of #{@city}."
       end
     end
-    return @city,@group
+    return @city,@group,@order
     # render :json => @city
   end
 
