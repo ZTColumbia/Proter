@@ -13,12 +13,12 @@
 1. url: http://0.0.0.0:3000/carts
 2. method: POST
 3. params: {
-   "user_id": 140,
    "product_id": 5,
    "amount": 1
    }
+(user_id from current_user.id)
 
-   
+
 
 ##Shopping Group
 ###buy

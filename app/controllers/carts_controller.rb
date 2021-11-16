@@ -6,7 +6,7 @@ class CartsController < ApplicationController
   end
 
   def create
-    user_id = params[:user_id]
+    user_id = current_user.id
     product_id = params[:product_id]
     amount = params[:amount].to_i
 
@@ -34,11 +34,13 @@ class CartsController < ApplicationController
     card.save
     flash[:notice] = "#{amount} new item #{product_id} was successfully added."
     # render text: "#{amount} new item #{product_id} was successfully added."
-    render :json => card
+    # render :json => card
+
+    redirect_to carts_path
   end
 
   def show
-    user_id = params[:user_id]
+    user_id = current_user.id
     @card = Cart.find_by(user_id: user_id)
 
     # create the card of current user if not exist
@@ -50,15 +52,15 @@ class CartsController < ApplicationController
     end
 
     @card = Cart.find_by(user_id: user_id)
-    @res = []
+    @res = {}
     items_id_list = @card.items.split('|')
     for item in items_id_list
-      id = item.split('_')[0]
-      @product = Product.find(id)
-      @res += [@product]
+      id, number = item.split('_')
+      product = Product.find(id)
+      @res[product] = number
     end
 
-    render :json => @res
+    # render :json => @res
   end
 
   def cart_params

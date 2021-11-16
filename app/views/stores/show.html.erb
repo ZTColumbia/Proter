@@ -58,9 +58,9 @@
                 </div>
                 <div style="padding: 35px;">
                   <%= form_tag carts_path, :class => 'form', :enctype => 'multipart/form-data' do%>
-                    <%= hidden_field :product_id, :value => @product.id %>
-                    <%= hidden_field :user_id, :value => current_user.id %>
-                    <%= hidden_field :amount, :value => 1 %>
+                    <%= hidden_field_tag :product_id, value = @product.id %>
+                    <%= hidden_field_tag :user_id, value = current_user.id %>
+                    <%= hidden_field_tag :amount, value = 1 %>
                     <br><br/>
                     <%= submit_tag 'Add to Cart', :class => 'btn btn-danger' %>
                     <a href="/stores/" class="btn btn-warning"> Back to Products </a>
