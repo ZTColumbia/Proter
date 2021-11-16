@@ -44,7 +44,7 @@ class CartsController < ApplicationController
     # create the card of current user if not exist
     # itemId1_amount|itemId2_amount
     if not @card
-      new_card = {:user_id => user_id, :items => ""}
+      new_card = {:user_id => user_id, :items => []}
       @new_card = Cart.create!(new_card)
       puts "A new cart of #{@new_card.user_id} was successfully created."
     end
@@ -54,11 +54,14 @@ class CartsController < ApplicationController
     items_id_list = @card.items.split('|')
     for item in items_id_list
       id = item.split('_')[0]
+      quantity=item.split('_')[1].to_i
       @product = Product.find(id)
-      @res += [@product]
+      @res += [[@product,quantity]]
     end
 
-    render :json => @res
+    return @res
+
+    
   end
 
 end

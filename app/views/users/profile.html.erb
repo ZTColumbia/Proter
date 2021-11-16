@@ -1,0 +1,56 @@
+<!--  app/views/users/profile.html.erb -->
+<h2>Details about <em><%= @user.email %></em></h2>
+
+<ul id="details">
+    
+  <li>
+    id:
+    <%= @user.id %>
+  </li>
+    
+  <li>
+    email:
+    <%= @user.email %>
+  </li>
+    
+  <li>
+    first name:
+    <%= @user.first_name %>
+  </li>
+    
+    
+  <li>
+    last name:
+    <%= @user.last_name %>
+  </li>
+
+    
+  <li>
+    address:
+    <%= @user.address %>
+  </li>
+    
+  <li>
+    city:
+    <%= @user.city%>
+  </li>
+    
+  <li>
+    state:
+    <%= @user.state%>
+  </li>
+    
+
+
+</ul>
+
+<h3>Description:</h3>
+    <li>
+        created at:
+        <%= @user.created_at%>
+    </li>
+<div class="row">
+
+  <%= link_to 'Edit', edit_user_path(@user), :class => 'btn btn-warning' %>
+  <%= link_to 'Back to Main Menu', root_path, :class => 'btn btn-warning' %>
+</div>

@@ -1,6 +1,9 @@
 require 'set'
 class PurchasesController < ApplicationController
 
+  def simple_buy
+      
+  end
   def group
     @city = params[:city]
     @group = ShoppingGroup.where(city:@city).order(id: :desc).limit(1).take
