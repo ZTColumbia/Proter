@@ -1,15 +1,25 @@
 class UsersController < Clearance::UsersController
   def profile
-    id = params[:id]
+    id = current_user.id
     @user = User.find(id)
   end
+  
   def edit
-    @user = User.find params[:id]
+    @user = User.find(id = current_user.id)
   end
+
   def show
-    id = params[:id]
+    id = current_user.id
     @user = User.find_by(id)
-    render :json => @user
+    puts ("id from show:")
+    puts (id)
+  end
+
+  def update
+    @user = User.find(current_user.id)
+    @user.update_attributes!(user_params)
+    flash[:notice] = "#{@user.email} was successfully updated."
+    redirect_to root_path
   end
 
   private
@@ -43,5 +53,7 @@ class UsersController < Clearance::UsersController
       user.card_expired_date = card_expired_date
     end
   end
+
+
   
 end

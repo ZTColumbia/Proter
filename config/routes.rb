@@ -21,9 +21,10 @@ Rails.application.routes.draw do
           controller: 'clearance/passwords',
           only: [:edit, :update]
     end
-  get 'users/:id', to: 'users#show'
+  get 'users/:id', to: 'users#show', as: :user
   get 'users/:id/profile', to: 'users#profile', as: :profile
   get 'users/:id/edit', to: 'users#edit', as: :edit_user
+  put 'users/:id', to: 'users#update', as: :update_user
     
   # Cart Module
   get "/carts", to: 'carts#show'
@@ -38,6 +39,7 @@ Rails.application.routes.draw do
   resources :products
       # get 'products/:id/buying', to: 'products#buy', as: :buying
   resources :stores
+
 
   #General Control
   #For Shopping Group
