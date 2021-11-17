@@ -17,6 +17,8 @@ module NavigationHelpers
     #   when /^(.*)'s profile page$/i
     #     user_profile_path(User.find_by_login($1))
     when /^the products page for "(.*)"$/i then '/products'
+    when /^the edit page for "(.*)"$/i
+      edit_product_path(Product.find_by_name($1))
     when /^the details page for "(.*)"$/i
       product_path(Product.find_by_name($1))
     when /^the buy page for "(.*)"$/i
