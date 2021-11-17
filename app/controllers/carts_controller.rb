@@ -17,12 +17,14 @@ class CartsController < ApplicationController
       puts "A new cart of #{@new_card.user_id} was successfully created."
     end
     card = Cart.find_by(user_id: user_id)
-    item_list = card.items.split('|')
     item_map = {}
-    for item in item_list
-      id = item.split('_')[0]
-      ant = item.split('_')[1]
-      item_map[id] = ant
+    if card.items
+      item_list = card.items.split('|')
+      for item in item_list
+        id = item.split('_')[0]
+        ant = item.split('_')[1]
+        item_map[id] = ant
+      end
     end
     item_map[product_id.to_s] = (item_map[product_id.to_s].to_i + amount).to_s
 
@@ -57,9 +59,6 @@ class CartsController < ApplicationController
       items_id_list = @card.items.split('|')
       for item in items_id_list
         id, number = item.split('_')
-        puts 666
-        puts item == '[]'
-        puts 666
         product = Product.find(id)
         @res[product] = number
       end
@@ -67,7 +66,4 @@ class CartsController < ApplicationController
     # render :json => @res
   end
 
-  def cart_params
-    params.permit(:amount, :product_id, :image, :cart_id)
-  end
 end

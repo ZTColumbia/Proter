@@ -2,7 +2,7 @@ class OrdersController < ApplicationController
 
   def show
     user_id = current_user.id
-    @user = User.find(user_id)
+    @user = current_user
     @orders = Order.where(user_id: user_id)
     @group = ShoppingGroup.find_by(city: @user.city)
 
