@@ -18,30 +18,14 @@ Scenario: Signup as a new user,sign in, and then sign out
     And I press "Sign up"
     Then I should see "new_email_for_testing@email.com"
     And I am on the home page
-    When I press "Sign out"
+    When I follow "Sign out"
     Then I am on the home page
+    And I should see "Please sign in"
     And I should not see "new_email_for_testing@email.com"
     
-Scenario: Signup as a new user,sign in
-    Given I am on the signup page
-    Then I should see "Sign up"
-    When  I fill in "First name" with "new_first_for_testing"
-    And I fill in "Last name" with "new_last_for_testing"
-    And I fill in "Password" with "new_Password_for_testing"
-    And I fill in "Email" with "new_Email_for_testing@Email.com"
-    And I fill in "City" with "new_City_for_testing"
-    And I fill in "State" with "new_State_for_testing"
-    And I fill in "Address" with "new_Address_for_testing"
-    And I fill in "Card number" with "000000000000"
-    And I fill in "Card cvv" with "123"
-    And I fill in "Card expired date" with "11.3.2021"
-    And I press "Sign up"
-    Then I should see "new_email_for_testing@email.com"
-    And I am on the home page
-
 Scenario: Forget password & reset
     Given I am on the home page
-    And I follow "Sign in"
+    And I follow "sign in"
     Then I am on the signin page
     Then I should see "Forgot password?"
     When I follow "Forgot password?"
@@ -59,15 +43,21 @@ Scenario: login use wrong email or password
     Then I should see "Bad email or password"
     
 Scenario: signed in users change password
-    Given I am on the signin page
-    When I fill in "Email" with "new_Email_for_testing@Email.com"
-    And I fill in "Password" with "new_Password_for_testing"
-    And I press "Sign in"
-    Then I am on the home page
-    Given I am on the password_edit page for "new_email_for_testing@email.com"
+    Given I have signed in
+    And I am on the password_edit page for "new_email_for_testing@email.com"
     And I should see "Reset your password"
     And I should see "To be emailed a link to reset your password"
     When I fill in "Email" with "new_Email2_for_testing@Email.com"
     And I press "Reset password"
     Then I should see "You will receive an email " 
+    
+Scenario: signed in users view profile
+    Given I have signed in
+    And I am on the home page
+    When I follow "Profile"
+    Then I am on the profile page for "new_Email_for_testing@Email.com"
+    Then I should see "Details about"
+    
+    
+    
 

@@ -16,26 +16,34 @@ Feature: management page for stores works well
   | dish table | Beyonds | 176  |32    |Black|0       |home    |12x14x21         |
   | chair      | Lucys   | 542  |57    |White|0       |home    |12x14x21         |
   | mirror     | G'mol   | 214  |23    |Black|0       |home    |12x14x21         |
-  Given the user sign in:
+  Given I have signed in:
   
 Scenario: View the default page
     Given I am on the home page
     Then I should see "Porter"
     And I should see "All Products"
     
-Scenario: View the detail page
+Scenario: View the detail page, and return to main page
     Given I am on the home page
     When  I follow "Buy armchair"
     Then I am on the buy page for "armchair"
-    And I should see "Description:"
+    And I should see "Description"
+    When I follow "Back to Products"
+    Then I am on the home page
 
-Scenario: Add products to cart
+Scenario: Add products to cart, view order and buy more products
     Given I am on the buy page for "armchair"
-    When I follow "Add to Cart"
+    When I press "Add to Cart"
     Then I am on the cart page
     And I should see "armchair"
-    
-Scenario: Back to main page
-Given I am on the buy page for "armchair"
-When I follow "Back to Products"
-Then I am on the home page
+    When I follow "Checkout"
+    Then I am on the checkout page
+    And I should see "Order Progress"
+    And I should see "armchair"
+    And I should see "Container progress"
+    When I follow "Buy More"
+    Then I am on the home page
+    When I follow "Cart"
+    Then I am on the cart page
+    When I follow "My Order"
+    Then I am on the checkout page

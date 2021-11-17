@@ -18,44 +18,25 @@ Feature: management page for products works well
   | mirror     | G'mol   | 214  |23    |Black|0       |home    |12x14x21         |
   
 Scenario: Create a new product
-    Given I am on the home page
+    Given I am on the products page
+    Then I should see "Porter"
+    And I should see "All Products"
     When  I follow "Add new product"
     And  I fill in "Name" with "new_for_testing"
     And I fill in "Price" with "30"
     And  I press "Save Changes"
     Then I am on the home page
     And I should see "new_for_testing"
-Scenario: View the default page
-    Given I am on the home page
-    Then I should see "Porter"
-    And I should see "All Products"
 
 Scenario: View the detail page, and back to main page
     Given I am on the details page for "cook"
-    Then I should see "Details about"
+    Then I should see "Details about cook"
+    And I should see "Jiahua"
+    And I should see "237"
+    And I should see "53"
     And I should see "White"
-    And I should see "Edit"
-    And I should see "Delete"
-    And I should see "Back to product list"
-    When I follow "Back to product list"
-    Then I am on the home page
-    
-Scenario: Use edit function in the detail page
-Given I am on the details page for "cook"
-When I follow "Edit"
-Then I should see "Edit Existing Product"
-When  I fill in "Brand" with "new_brand_for_testing"
-And  I press "Save Changes"
-Then I am on the home page
-And I should see "new_brand_for_testing"
-
-Scenario: Use delete in the detail page
-Given I am on the details page for "cook"
-When I follow "Delete"
-Then I am on the home page
-And I should not see "cook"
-
-Scenario: add an item to cart in the detail page
-Given I am on the details page for "cook"
-When I follow "Add one to cart"
-Then I should see "You buy product"
+    And I should see "0"
+    And I should see "children"
+    And I should see "12x14x21"
+    When I follow "Back"
+    Then I am on the products page

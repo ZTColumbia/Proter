@@ -31,9 +31,9 @@ describe PurchasesController, :type => :controller do
         end
    end
     
-   context "Have citys to buy and not in group" do
+   context "Not have citys to buy and not in group" do
         before :each do
-          ShoppingGroup.create(city: 'San Francisco', cur_people: '1', total_people: '2', people: 'Alice_Bob')
+          ShoppingGroup.create(city: 'San Francisco', cur_people: '1', total_people: '2', people: '2_3')
           Cart.create(user_id: '1', items: "1_1|2_2")
           sign_in
         end
@@ -45,7 +45,19 @@ describe PurchasesController, :type => :controller do
     
    context "Have citys to buy and in group" do
         before :each do
-          ShoppingGroup.create(city: 'San Francisco', cur_people: '1', total_people: '2', people: '1_2')
+          ShoppingGroup.create(city: 'New York', cur_people: '1', total_people: '2', people: '1_2')
+          Cart.create(user_id: '1', items: "1_1|2_2")
+          sign_in
+        end
+        it "Should be post a shoppinggroup" do
+          post :buy, {:user_id => "1", :product_num => "1", :city => "San Francisco"}
+          expect(response).to be_truthy
+        end
+   end
+  
+  context "Have citys to buy and not in group" do
+        before :each do
+          ShoppingGroup.create(city: 'New York', cur_people: '1', total_people: '2', people: '2_3')
           Cart.create(user_id: '1', items: "1_1|2_2")
           sign_in
         end
