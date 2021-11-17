@@ -66,4 +66,3 @@ Then /^(?:|I )should not see "([^"]*)"$/ do |text|
   end
 end
 
-
