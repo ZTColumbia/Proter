@@ -83,3 +83,20 @@
    "total_people": 10
    }
 ~~~
+
+
+Login:
+管理员账户
+admin@porter.com
+porter
+
+待开发：
+Clear cart
+Admin privilege
+return conbined orders instead of one order
+complete order when the minimun weight is fullfilled
+share shopping
+
+
+
+
