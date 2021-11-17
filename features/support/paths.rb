@@ -20,6 +20,10 @@ module NavigationHelpers
       edit_product_path(Product.find_by_name($1))
     when /^the details page for "(.*)"$/i
       product_path(Product.find_by_name($1))
+    when /^the buy page for "(.*)"$/i
+      store_path(Product.find_by_name($1))
+    when /^the cart page$/
+      carts_path
     when /^the signup page$/
       sign_up_path()
     when /^the signin page$/

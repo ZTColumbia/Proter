@@ -21,6 +21,23 @@ Scenario: Signup as a new user,sign in, and then sign out
     When I press "Sign out"
     Then I am on the home page
     And I should not see "new_email_for_testing@email.com"
+    
+Scenario: Signup as a new user,sign in
+    Given I am on the signup page
+    Then I should see "Sign up"
+    When  I fill in "First name" with "new_first_for_testing"
+    And I fill in "Last name" with "new_last_for_testing"
+    And I fill in "Password" with "new_Password_for_testing"
+    And I fill in "Email" with "new_Email_for_testing@Email.com"
+    And I fill in "City" with "new_City_for_testing"
+    And I fill in "State" with "new_State_for_testing"
+    And I fill in "Address" with "new_Address_for_testing"
+    And I fill in "Card number" with "000000000000"
+    And I fill in "Card cvv" with "123"
+    And I fill in "Card expired date" with "11.3.2021"
+    And I press "Sign up"
+    Then I should see "new_email_for_testing@email.com"
+    And I am on the home page
 
 Scenario: Forget password & reset
     Given I am on the home page

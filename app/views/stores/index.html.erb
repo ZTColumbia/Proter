@@ -57,7 +57,7 @@
                     <h2 class="card-text">$<%= product.price %></h2>
                     <p class="card-text"><%= product.color %></p>
                     <% if signed_in? %>
-                        <a href="/stores/<%= product.id %>" class="btn btn-warning"> <%="Buy #{product.name}" %>  </a>
+                        <%= link_to "Buy #{product.name}", store_path(product), :class => 'btn btn-warning' %>
                     <% end %>
                 </div>
             </div>

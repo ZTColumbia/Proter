@@ -44,7 +44,7 @@
             <button type="button" class="btn btn-light" ><%= link_to 'Sign out', sign_out_path, method: :delete%></button>
         <% else %>
             <strong>Please sign in</strong> 
-            <button type="button" class="btn btn-light"><%= link_to 'Sign in', sign_in_path %></button>
+            <a href="/sign_in" class="btn btn-light"> sign in </a>
         <% end %>
     </div>
     <div class="container">

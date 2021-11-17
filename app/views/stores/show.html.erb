@@ -62,7 +62,7 @@
                     <%= hidden_field_tag :user_id, value = current_user.id %>
                     <%= hidden_field_tag :amount, value = 1 %>
                     <br><br/>
-                    <%= submit_tag 'Add to Cart', :class => 'btn btn-danger' %>
+                    <%= link_to 'Add to Cart', carts_path, :class => 'btn btn-danger' %>
                     <a href="/stores/" class="btn btn-warning"> Back to Products </a>
                   <% end %>
                 </div>
