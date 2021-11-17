@@ -23,18 +23,24 @@
     
   <li>
     Price:
-    <%= @product.price %>
+    $ <%= @product.price %>
   </li>
 
+  <li>
+    Discount:
+    <%= @product.discount %>
+    as <%= (1 - @product.discount).round(2)*100 %>% off
+  </li>
+    
     
   <li>
     Discount Price:
-    <%= @product.price * @product.discount %>
+    $ <%= @product.price * @product.discount %>
   </li>
     
   <li>
     Weight:
-    <%= @product.weight%>
+    <%= @product.weight%> lbs
   </li>
     
   <li>
