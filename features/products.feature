@@ -29,7 +29,9 @@ Scenario: Create a new product
     And I should see "new_for_testing"
 
 Scenario: View the detail page, and back to main page
-    Given I am on the details page for "cook"
+    Given I am on the products page
+    When  I follow "More about cook"
+    Then I am on the details page for "cook"
     Then I should see "Details about cook"
     And I should see "Jiahua"
     And I should see "237"
@@ -40,3 +42,19 @@ Scenario: View the detail page, and back to main page
     And I should see "12x14x21"
     When I follow "Back"
     Then I am on the products page
+    
+Scenario: Update the product
+    Given I am on the details page for "cook"
+    When I follow "Edit"
+    Then I am on the edit page for "cook"
+    Then I should see "Edit Existing Product"
+    When I fill in "Name" with "new_cook"
+    And I press "Save Changes"
+    Then I am on the products page
+    And I should see "new_cook"
+    
+Scenario: Use delete in the detail page
+    Given I am on the details page for "cook"
+    When I follow "Delete"
+    Then I am on the products page
+    And I should not see "cook"
