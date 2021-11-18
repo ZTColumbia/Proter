@@ -51,12 +51,21 @@ Scenario: signed in users change password
     And I press "Reset password"
     Then I should see "You will receive an email " 
     
-Scenario: signed in users view profile
+Scenario: View profile and edit profile
     Given I have signed in
     And I am on the home page
     When I follow "Profile"
     Then I am on the profile page for "new_Email_for_testing@Email.com"
     Then I should see "Details about"
+    When I follow "Edit"
+    Then I am on the profile edit page for "new_Email_for_testing@Email.com"
+    And I should see "Edit Existing User"
+    When I fill in "first name" with "new_name"
+    And I press "Save Changes"
+    Then I am on the home page
+    When I follow "Profile"
+    Then I should see "new_name"
+    
     
     
     
