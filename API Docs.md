@@ -4,9 +4,24 @@
 1. url: http://0.0.0.0:3000/orders/
 2. method: GET
 3. output: 
+
+NEW
 ~~~[
    {
-   "order": [
+   "products": [
+   {
+   product_object: amount
+   }],
+   {
+   "group": group_object
+   }
+]
+~~~
+
+OLD
+~~~[
+   {
+   "products": [
    {
    "id": 1,
    "product_id": 1,
@@ -96,6 +111,9 @@ Admin privilege
 return conbined orders instead of one order
 complete order when the minimun weight is fullfilled
 share shopping
+
+ 问题：
+ 点 My order 的时候会直接下单,清空购物车
 
 
 
