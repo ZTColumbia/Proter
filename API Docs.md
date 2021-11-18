@@ -112,9 +112,6 @@ return conbined orders instead of one order
 complete order when the minimun weight is fullfilled
 share shopping
 
- 问题：
- 点 My order 的时候会直接下单,清空购物车
-
 
 
 
