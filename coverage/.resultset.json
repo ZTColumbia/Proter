@@ -1,25 +1,25 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/codio/workspace/Proter/app/helpers/application_helper.rb": {
+      "/Users/dechenzeng/Desktop/0_SEAS_T1/SaaS_Project/Proter/app/helpers/application_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/codio/workspace/Proter/app/helpers/products_helper.rb": {
+      "/Users/dechenzeng/Desktop/0_SEAS_T1/SaaS_Project/Proter/app/helpers/products_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/codio/workspace/Proter/app/helpers/store_helper.rb": {
+      "/Users/dechenzeng/Desktop/0_SEAS_T1/SaaS_Project/Proter/app/helpers/store_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/codio/workspace/Proter/app/controllers/carts_controller.rb": {
+      "/Users/dechenzeng/Desktop/0_SEAS_T1/SaaS_Project/Proter/app/controllers/carts_controller.rb": {
         "lines": [
           1,
           null,
@@ -92,7 +92,7 @@
           null
         ]
       },
-      "/home/codio/workspace/Proter/app/controllers/application_controller.rb": {
+      "/Users/dechenzeng/Desktop/0_SEAS_T1/SaaS_Project/Proter/app/controllers/application_controller.rb": {
         "lines": [
           1,
           1,
@@ -102,52 +102,52 @@
           null
         ]
       },
-      "/home/codio/workspace/Proter/app/uploaders/image_uploader.rb": {
+      "/Users/dechenzeng/Desktop/0_SEAS_T1/SaaS_Project/Proter/app/uploaders/image_uploader.rb": {
         "lines": [
           1,
           null,
           1,
           1,
+          2,
+          2,
+          null,
+          null
+        ]
+      },
+      "/Users/dechenzeng/Desktop/0_SEAS_T1/SaaS_Project/Proter/app/models/cart.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/dechenzeng/Desktop/0_SEAS_T1/SaaS_Project/Proter/app/models/order.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/dechenzeng/Desktop/0_SEAS_T1/SaaS_Project/Proter/app/models/product.rb": {
+        "lines": [
           1,
           1,
           null,
           null
         ]
       },
-      "/home/codio/workspace/Proter/app/models/cart.rb": {
+      "/Users/dechenzeng/Desktop/0_SEAS_T1/SaaS_Project/Proter/app/models/shopping_group.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/codio/workspace/Proter/app/models/order.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/home/codio/workspace/Proter/app/models/product.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/home/codio/workspace/Proter/app/models/shopping_group.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/home/codio/workspace/Proter/app/models/user.rb": {
+      "/Users/dechenzeng/Desktop/0_SEAS_T1/SaaS_Project/Proter/app/models/user.rb": {
         "lines": [
           1,
           1,
           null
         ]
       },
-      "/home/codio/workspace/Proter/app/controllers/orders_controller.rb": {
+      "/Users/dechenzeng/Desktop/0_SEAS_T1/SaaS_Project/Proter/app/controllers/orders_controller.rb": {
         "lines": [
           1,
           null,
@@ -188,7 +188,7 @@
           null
         ]
       },
-      "/home/codio/workspace/Proter/app/controllers/products_controller.rb": {
+      "/Users/dechenzeng/Desktop/0_SEAS_T1/SaaS_Project/Proter/app/controllers/products_controller.rb": {
         "lines": [
           1,
           1,
@@ -245,7 +245,7 @@
           null
         ]
       },
-      "/home/codio/workspace/Proter/app/controllers/purchases_controller.rb": {
+      "/Users/dechenzeng/Desktop/0_SEAS_T1/SaaS_Project/Proter/app/controllers/purchases_controller.rb": {
         "lines": [
           1,
           1,
@@ -328,7 +328,7 @@
           null
         ]
       },
-      "/home/codio/workspace/Proter/app/controllers/stores_controller.rb": {
+      "/Users/dechenzeng/Desktop/0_SEAS_T1/SaaS_Project/Proter/app/controllers/stores_controller.rb": {
         "lines": [
           1,
           1,
@@ -342,20 +342,30 @@
           null
         ]
       },
-      "/home/codio/workspace/Proter/app/controllers/users_controller.rb": {
+      "/Users/dechenzeng/Desktop/0_SEAS_T1/SaaS_Project/Proter/app/controllers/users_controller.rb": {
         "lines": [
           1,
           1,
           1,
-          1,
+          0,
+          null,
           null,
           1,
           1,
           null,
+          null,
           1,
           1,
+          0,
+          0,
+          0,
+          null,
+          null,
           1,
-          1,
+          0,
+          0,
+          0,
+          0,
           null,
           null,
           1,
@@ -390,15 +400,17 @@
           null,
           null,
           null,
+          null,
+          null,
           null
         ]
       }
     },
-    "timestamp": 1637184572
+    "timestamp": 1637216451
   },
   "Cucumber Features": {
     "coverage": {
-      "/home/codio/workspace/Proter/features/support/selectors.rb": {
+      "/Users/dechenzeng/Desktop/0_SEAS_T1/SaaS_Project/Proter/features/support/selectors.rb": {
         "lines": [
           1,
           null,
@@ -415,7 +427,7 @@
           1
         ]
       },
-      "/home/codio/workspace/Proter/features/support/paths.rb": {
+      "/Users/dechenzeng/Desktop/0_SEAS_T1/SaaS_Project/Proter/features/support/paths.rb": {
         "lines": [
           1,
           null,
@@ -469,7 +481,7 @@
           1
         ]
       },
-      "/home/codio/workspace/Proter/features/step_definitions/products_steps.rb": {
+      "/Users/dechenzeng/Desktop/0_SEAS_T1/SaaS_Project/Proter/features/step_definitions/products_steps.rb": {
         "lines": [
           1,
           7,
@@ -486,7 +498,7 @@
           null
         ]
       },
-      "/home/codio/workspace/Proter/features/step_definitions/spec_helper.rb": {
+      "/Users/dechenzeng/Desktop/0_SEAS_T1/SaaS_Project/Proter/features/step_definitions/spec_helper.rb": {
         "lines": [
           null,
           null,
@@ -582,7 +594,7 @@
           null
         ]
       },
-      "/home/codio/workspace/Proter/features/step_definitions/web_steps.rb": {
+      "/Users/dechenzeng/Desktop/0_SEAS_T1/SaaS_Project/Proter/features/step_definitions/web_steps.rb": {
         "lines": [
           null,
           null,
@@ -654,7 +666,7 @@
           null
         ]
       },
-      "/home/codio/workspace/Proter/app/models/product.rb": {
+      "/Users/dechenzeng/Desktop/0_SEAS_T1/SaaS_Project/Proter/app/models/product.rb": {
         "lines": [
           1,
           1,
@@ -662,7 +674,7 @@
           null
         ]
       },
-      "/home/codio/workspace/Proter/app/uploaders/image_uploader.rb": {
+      "/Users/dechenzeng/Desktop/0_SEAS_T1/SaaS_Project/Proter/app/uploaders/image_uploader.rb": {
         "lines": [
           1,
           null,
@@ -674,7 +686,7 @@
           null
         ]
       },
-      "/home/codio/workspace/Proter/config/initializers/shrine.rb": {
+      "/Users/dechenzeng/Desktop/0_SEAS_T1/SaaS_Project/Proter/config/initializers/shrine.rb": {
         "lines": [
           1,
           1,
@@ -699,7 +711,7 @@
           null
         ]
       },
-      "/home/codio/workspace/Proter/app/controllers/products_controller.rb": {
+      "/Users/dechenzeng/Desktop/0_SEAS_T1/SaaS_Project/Proter/app/controllers/products_controller.rb": {
         "lines": [
           1,
           1,
@@ -756,7 +768,7 @@
           null
         ]
       },
-      "/home/codio/workspace/Proter/app/controllers/application_controller.rb": {
+      "/Users/dechenzeng/Desktop/0_SEAS_T1/SaaS_Project/Proter/app/controllers/application_controller.rb": {
         "lines": [
           1,
           1,
@@ -766,25 +778,25 @@
           null
         ]
       },
-      "/home/codio/workspace/Proter/app/helpers/application_helper.rb": {
+      "/Users/dechenzeng/Desktop/0_SEAS_T1/SaaS_Project/Proter/app/helpers/application_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/codio/workspace/Proter/app/helpers/products_helper.rb": {
+      "/Users/dechenzeng/Desktop/0_SEAS_T1/SaaS_Project/Proter/app/helpers/products_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/codio/workspace/Proter/app/helpers/store_helper.rb": {
+      "/Users/dechenzeng/Desktop/0_SEAS_T1/SaaS_Project/Proter/app/helpers/store_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/codio/workspace/Proter/app/controllers/stores_controller.rb": {
+      "/Users/dechenzeng/Desktop/0_SEAS_T1/SaaS_Project/Proter/app/controllers/stores_controller.rb": {
         "lines": [
           1,
           1,
@@ -798,14 +810,20 @@
           null
         ]
       },
-      "/home/codio/workspace/Proter/app/models/user.rb": {
+      "/Users/dechenzeng/Desktop/0_SEAS_T1/SaaS_Project/Proter/app/models/user.rb": {
         "lines": [
           1,
           1,
           null
         ]
       },
-      "/home/codio/workspace/Proter/app/controllers/carts_controller.rb": {
+      "/Users/dechenzeng/Desktop/0_SEAS_T1/SaaS_Project/Proter/app/models/order.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/dechenzeng/Desktop/0_SEAS_T1/SaaS_Project/Proter/app/controllers/carts_controller.rb": {
         "lines": [
           1,
           null,
@@ -878,13 +896,13 @@
           null
         ]
       },
-      "/home/codio/workspace/Proter/app/models/cart.rb": {
+      "/Users/dechenzeng/Desktop/0_SEAS_T1/SaaS_Project/Proter/app/models/cart.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/codio/workspace/Proter/app/controllers/purchases_controller.rb": {
+      "/Users/dechenzeng/Desktop/0_SEAS_T1/SaaS_Project/Proter/app/controllers/purchases_controller.rb": {
         "lines": [
           1,
           1,
@@ -908,55 +926,55 @@
           1,
           null,
           null,
-          4,
-          4,
-          4,
+          3,
+          3,
+          3,
           null,
           null,
-          4,
+          3,
           null,
-          4,
-          4,
+          3,
+          3,
           1,
           1,
           null,
           null,
-          1,
-          1,
-          null,
-          4,
-          4,
-          null,
-          null,
-          null,
-          4,
-          4,
-          null,
-          null,
-          1,
-          1,
-          1,
           1,
           1,
           null,
           3,
           3,
+          null,
+          null,
+          null,
           3,
           3,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          2,
+          2,
+          2,
+          2,
+          2,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
           3,
-          null,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          4,
           null,
           null,
           1,
@@ -967,19 +985,13 @@
           null
         ]
       },
-      "/home/codio/workspace/Proter/app/models/order.rb": {
+      "/Users/dechenzeng/Desktop/0_SEAS_T1/SaaS_Project/Proter/app/models/shopping_group.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/codio/workspace/Proter/app/models/shopping_group.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/home/codio/workspace/Proter/app/controllers/orders_controller.rb": {
+      "/Users/dechenzeng/Desktop/0_SEAS_T1/SaaS_Project/Proter/app/controllers/orders_controller.rb": {
         "lines": [
           1,
           null,
@@ -1020,17 +1032,27 @@
           null
         ]
       },
-      "/home/codio/workspace/Proter/app/controllers/users_controller.rb": {
+      "/Users/dechenzeng/Desktop/0_SEAS_T1/SaaS_Project/Proter/app/controllers/users_controller.rb": {
         "lines": [
           1,
           1,
           2,
           2,
           null,
+          null,
           1,
           0,
           null,
+          null,
           1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          1,
+          0,
           0,
           0,
           0,
@@ -1068,10 +1090,12 @@
           null,
           null,
           null,
+          null,
+          null,
           null
         ]
       }
     },
-    "timestamp": 1637188711
+    "timestamp": 1637216530
   }
 }
