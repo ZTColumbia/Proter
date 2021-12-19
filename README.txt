@@ -1,3 +1,7 @@
+#Import Note:
+Due to Heroku's file system policy, free tier only support ephemeral image upload.
+Please test file upload locally.
+
 #Details:
 ##(1)Team
 Member 1 Name: Zhan, Tong
@@ -63,9 +67,6 @@ Admin privilege is in progress.
 
 (4)
 Heroku deployment link:https://thawing-retreat-14461.herokuapp.com/
-Note: 
-Due to Heroku's file system policy, free tier only suport ephemeral image upload.
-Please test file upload locally.
 
 (5)
 Code (Github repository link):https://github.com/ZTColumbia/Proter
