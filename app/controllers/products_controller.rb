@@ -5,9 +5,24 @@ class ProductsController < ApplicationController
   end
 
   def create
-    @product = Product.create!(product_params)
-    flash[:notice] = "#{@product.name} was successfully created."
-    redirect_to products_path
+    name = product_params[:name]
+    brand = product_params[:brand]
+    price = product_params[:price]
+    weight = product_params[:weight]
+    color = product_params[:color]
+    discount = product_params[:discount]
+    category = product_params[:category]
+    box = product_params[:box]
+    image_data = product_params[:image_data]
+
+    if not name or not brand or not price or not weight or not color or not discount or not category or not box or not image_data
+      flash[:notice] = "Your input is invalid!"
+      redirect_to products_path
+    else
+      @product = Product.create!(product_params)
+      flash[:notice] = "#{@product.name} was successfully created."
+      redirect_to products_path
+    end
   end
 
   def update

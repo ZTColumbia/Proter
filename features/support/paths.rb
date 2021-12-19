@@ -33,6 +33,8 @@ module NavigationHelpers
       sign_in_path()
     when /^the profile page for "(.*)"$/
       profile_path(1)
+    when /^the profile edit page for "(.*)"$/
+      edit_user_path(1)
     when /^the new password page$/
       new_password_path()
     when /^the password_edit page for "(.*)"$/i
