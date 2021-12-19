@@ -28,11 +28,17 @@
             <li class="nav-item">
               <a class="nav-link text-dark" href="/">  Home  </a>
             </li>
+            <% if current_user.email == "admin@porter.com"%>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="/products">  Manage Products  </a>
+              </li>
+            <% end %>
             <% if Order.where(user_id: current_user.id) != []%>
               <li class="nav-item">
                 <a class="nav-link text-dark" href="/orders">  My Order  </a>
               </li>
             <% end %>
+
             <li class="nav-item">
               <a class="nav-link text-dark" href="/carts">  Cart  </a>
             </li>
