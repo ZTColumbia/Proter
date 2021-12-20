@@ -22,10 +22,9 @@ class UsersController < Clearance::UsersController
     redirect_to root_path
   end
 
-  private
     
   def user_params
-    params[:user].permit(:email, :password, :first_name, :last_name, :city, :state, :address, :card_number, :card_cvv, :card_expired_date)
+    params.require(:user).permit(:email, :password, :first_name, :last_name, :city, :state, :address, :card_number, :card_cvv, :card_expired_date)
   end
     
   def user_from_params

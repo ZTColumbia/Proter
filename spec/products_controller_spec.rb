@@ -2,10 +2,18 @@ require 'rails_helper'
 
 describe ProductsController, :type => :controller do
   describe 'create' do
-    let!(:params) {{name: "ap"}}
+    params = {"name" => "ap", "brand" => "ag", "price" => "12", "weight" => "120", "color" => "red", "discount" => "1", "category" => "frn", "box" => "1"}
     let!(:product) {double('product', params)}
     it 'create a new product by calling create' do
       expect(Product).to receive(:create!).with(params).and_return(product)
+      post :create, {product: params}
+    end
+  end
+  
+  context "Unvalid Input" do
+    params = {"name" => "ap", "price" => "12", "weight" => "120", "color" => "red", "discount" => "1", "category" => "frn", "box" => "1"}
+    let!(:product) {double('product', params)}
+    it "Should be Unvalid Input" do
       post :create, {product: params}
     end
   end
